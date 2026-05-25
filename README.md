@@ -1,25 +1,17 @@
-# Breast Cancer Classification Project
+# Marketing Mix Modeling (MMM) Case Study
 
-This project explores three different machine learning models to classify breast cancer tumors as **Malignant** or **Benign** using the UCI Breast Cancer Wisconsin dataset.
+## Project Overview
+This repository contains a data-driven evaluation of a 104-week marketing dataset spanning from 2020 to 2022. The objective of this analysis is to evaluate the performance of seven distinct marketing spend channels and identify their impact on overall company revenue. 
 
-## 🏆 Model Performance Comparison
-We compared a "weighted expert," a "neighbor vote," and a "wisdom of the crowd" approach.
+The primary analytical focus is on identifying performance drivers, understanding time-lagged marketing effects (Adstock), and isolating specific high-growth periods to optimize budget allocation.
 
-| Model | AUC Score | Best Use Case |
-| :--- | :--- | :--- |
-| **Logistic Regression** | **0.9974** | High interpretability & best performance for this data. |
-| **Random Forest** | 0.9953 | Capturing complex, non-linear patterns. |
-| **k-Nearest Neighbors** | ~0.9500 | Identifying similar patient "profiles." |
+## Key Methodology & Findings
+* **Data Chronology:** Rectified date string formatting issues using European date parsing standards and aligned the dataset chronologically to establish a reliable baseline.
+* **Momentum Analysis:** Isolated the top four major positive revenue jumps alongside their preceding four-week operational windows to track lag effects and marketing build-ups.
+* **The Holiday Effect:** Identified a notable consumer behavior trend during late November 2020, where a significant drop in revenue was immediately followed by a record-breaking spike, aligning with seasonal Black Friday purchase patterns.
 
-## 🧠 What the Models Learned
-* **Logistic Regression:** Identified `worst texture` and `radius error` as the strongest indicators of malignancy.
-* **Random Forest:** Found that `worst area` and `concave points` were the most important features across 100 decision trees.
-
-## 🛠️ How to Use
-1. Clone the repo.
-2. Ensure `scikit-learn`, `pandas`, and `seaborn` are installed.
-3. Run `breastcnser-logisticModel-sklearn.py` to see the winning model.
-
-## 📅 Project Status
-Completed on March 5, 2026. 
-*Next steps: Deploying the Logistic Regression model into a web interface.*
+## Technical Stack & Environment
+* **Environment Name:** `pymc_env`
+* **Language:** Python (configured via virtual environment)
+* **Core Libraries:** Pandas, NumPy, Matplotlib, Seaborn
+* **Bayesian Framework:** PyMC (v3.14.4)
